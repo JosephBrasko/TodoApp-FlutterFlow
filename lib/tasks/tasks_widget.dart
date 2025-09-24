@@ -172,7 +172,9 @@ class _TasksWidgetState extends State<TasksWidget> {
                               taskDoc: listViewTasksRecord,
                               checkAction: () async {
                                 await listViewTasksRecord.reference
-                                    .update(createTasksRecordData());
+                                    .update(createTasksRecordData(
+                                  completed: true,
+                                ));
                               },
                             ),
                           );
@@ -189,7 +191,7 @@ class _TasksWidgetState extends State<TasksWidget> {
 
                     context.goNamedAuth(LoginWidget.routeName, context.mounted);
                   },
-                  text: 'Logout',
+                  text: 'Logout ',
                   options: FFButtonOptions(
                     height: 40.0,
                     padding:

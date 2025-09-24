@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "341579900346",
+    "project_id": "todo-qrtpm4",
+    "storage_bucket": "todo-qrtpm4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341579900346:android:139e438c626abcf34e2983",
+        "android_client_info": {
+          "package_name": "com.mycompany.todo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBff8pTgHe8mDC12PELokMOuLdxI--bGNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

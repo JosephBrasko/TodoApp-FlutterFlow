@@ -92,15 +92,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => LoginWidget(),
         ),
         FFRoute(
+          name: OnboardingWidget.routeName,
+          path: OnboardingWidget.routePath,
+          builder: (context, params) => OnboardingWidget(),
+        ),
+        FFRoute(
+          name: CompletedWidget.routeName,
+          path: CompletedWidget.routePath,
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'completed')
+              : CompletedWidget(),
+        ),
+        FFRoute(
           name: TasksWidget.routeName,
           path: TasksWidget.routePath,
           builder: (context, params) =>
               params.isEmpty ? NavBarPage(initialPage: 'tasks') : TasksWidget(),
-        ),
-        FFRoute(
-          name: OnboardingWidget.routeName,
-          path: OnboardingWidget.routePath,
-          builder: (context, params) => OnboardingWidget(),
         ),
         FFRoute(
           name: DetailsWidget.routeName,
@@ -114,13 +121,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.Document,
             ),
           ),
-        ),
-        FFRoute(
-          name: CompletedWidget.routeName,
-          path: CompletedWidget.routePath,
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'completed')
-              : CompletedWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
